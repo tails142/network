@@ -24,13 +24,20 @@ public class Literals
 	public static bool lDefaultRegisterOnLAN = false;
 	public static int lDefaultPort = 25000;
 	
-
+	public static string kHealth = "kH";
+	public static string kCoconutsInHand = "kI";
+	public static string kCoconutsInHut = "kT";
+	
+	
 	public static string kPlayerHandle = "handle";
 	public static string kMainCharacterTag = "MainCharacter";
 	public static string kCharacterMeshTag = "CharacterMesh";
 	public static string kGhostCharacterTag = "GhostCharacter";
 	public static string kBallTag = "Ball";
+	public static int kMainCharacterLayer = 9;
+	public static int kTerrainLayer = 10;
 	public static int kGhostLayer = 11;
+	public static int kTreeLayer = 12;
 	
 	public static int kPlay = 1;
 	public static int kCrossfade = 2;
@@ -45,5 +52,7 @@ public class Literals
 	public static int kAnimationRunLeft = 7;
 	
 	public static int kCharacterSelectorNetworkGroup = 10;
+	
+	public static string lDefaultLeaderboard = "coconuthutleaderboard";
 
 }

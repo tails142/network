@@ -354,11 +354,11 @@ function Awake ()
 
 		// This is The One
 //		DontDestroyOnLoad(this);
-//		GameObjectManager.Keep(gameObject, 0);
+		GameObjectManager.Keep(gameObject, 0);
 		
 		// This is its content
 //		DontDestroyOnLoad(contentGO);
-//		GameObjectManager.Keep(contentGO, 0);
+		GameObjectManager.Keep(contentGO, 0);
 						
 		GUISlideDialogWrapper.SetGuiForKey(gameObject.name, gameObject);
 	}

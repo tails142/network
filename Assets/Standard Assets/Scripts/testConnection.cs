@@ -13,10 +13,11 @@ public class testConnection : MonoBehaviour {
 	{
 		Debug.Log("Could not connect to master server: " + info);
 
-		WWW www = new WWW("pvlgrvm.gullcatlock.com/checkstatus.php");
-
+		WWW  www = new WWW("http://pvlgrvm.gullcatlock.com/checkstatus.php");
 
 	}
+
+
 
 	void OnServerInitialized()
 	{

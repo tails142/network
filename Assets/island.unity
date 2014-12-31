@@ -185,9 +185,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &91077393
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -207,6 +206,7 @@ Transform:
   m_LocalScale: {x: 86.9206161, y: 5.43253851, z: 86.9206161}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &353625066
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,9 +243,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &353625068
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -265,6 +264,7 @@ Transform:
   m_LocalScale: {x: .400000006, y: .5, z: .400000006}
   m_Children: []
   m_Father: {fileID: 1853824113}
+  m_RootOrder: 0
 --- !u!1 &425426508
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +304,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &606756523
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +357,7 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!4 &606756526
 Transform:
@@ -368,6 +370,73 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!1 &797504859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 797504860}
+  - 114: {fileID: 797504861}
+  m_Layer: 0
+  m_Name: BTSNetworkSetup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &797504860
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 797504859}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+--- !u!114 &797504861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 797504859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6aeb344693ba044ca4804a1cdc580d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSingleton: 0
+  showOnStart: 0
+  screenWidth: 480
+  screenHeight: 320
+  contentGO: {fileID: 0}
+  contentRenderMessage: rendercontent
+  boxSize: {x: 0, y: 0}
+  startPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0, y: 0, z: 0}
+  slideTime: 3
+  disableWhenInStartPos: 1
+  fade: 1
+  maxAlpha: 1
+  _Skin: {fileID: 0}
+  _Depth: -2
+  dialogTimeScale: 1
+  okIcon: []
+  cancelIcon: []
+  callingDialogGO: {fileID: 0}
+  okMessage: []
+  okMessageType: []
+  okSendDelay: []
+  okMessageGO: []
+  cancelMessage: []
+  cancelMessageType: []
+  cancelSendDelay: []
+  cancelMessageGO: []
 --- !u!1 &827166872
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +469,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1853824113}
+  m_RootOrder: 1
 --- !u!81 &827166874
 AudioListener:
   m_ObjectHideFlags: 0
@@ -471,8 +541,11 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
   m_HDR: 0
   m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
 --- !u!45 &827166879
 Skybox:
   m_ObjectHideFlags: 0
@@ -519,6 +592,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &1574855826
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +655,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1001 &1676282902
 Prefab:
   m_ObjectHideFlags: 0
@@ -653,6 +728,7 @@ Transform:
   - {fileID: 353625069}
   - {fileID: 827166873}
   m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!114 &1853824114
 MonoBehaviour:
   m_ObjectHideFlags: 0

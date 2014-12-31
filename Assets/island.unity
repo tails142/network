@@ -215,6 +215,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 209062949}
+  - 114: {fileID: 209062950}
   m_Layer: 0
   m_Name: NetworkSetuPGUIContent
   m_TagString: Untagged
@@ -233,6 +234,52 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 797504860}
+--- !u!114 &209062950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 209062948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc5e3af8f7099f444aedafd19a99c4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogName: Network Settings
+  networkLevelToLoad: 
+  destroyOnLoad: []
+  activateOnLoad: []
+  parentToMainCameraOnLoad: []
+  BTS_FailedConnectionCount: 0
+  BTS_FailedConnectionCountMax: 2
+  BTS_MasterServerIP: bzn.gullcatlock.com
+  BTS_MasterServerRestartURLPath: /checkstatus.php
+  BTS_isHosting: 0
+  masterServerAutoRefreshSeconds: 30
+  masterServerTimeoutSeconds: 10
+  textLabelColor: {r: 0, g: 1, b: 0, a: 1}
+  guiSelectColor: {r: 1, g: .921568632, b: .0156862754, a: 1}
+  guiErrorColor: {r: 1, g: 0, b: 0, a: 1}
+  guiOKColor: {r: 0, g: 1, b: 0, a: 1}
+  currentMenu: 0
+  leftMarginPercent: 50
+  topMargin: .100000001
+  scrollPosition: {x: 0, y: 0}
+  buttonHeight: 20
+  listSpacing: 0
+  gameName: 
+  gamePassword: 
+  gameComment: 
+  gamePort: 
+  maxPlayers: 
+  registerOnLan: 0
+  registerOnInternet: 0
+  lastRegisterOnLan: 0
+  lastRegisterOnInternet: 0
+  buttonBar:
+  - Solo Game
+  - Network Game
+  consoleLog: 
 --- !u!1 &353625066
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,45 +338,6 @@ Transform:
   m_LocalScale: {x: .400000006, y: .5, z: .400000006}
   m_Children: []
   m_Father: {fileID: 1853824113}
---- !u!1 &425426508
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 425426510}
-  - 114: {fileID: 425426509}
-  m_Layer: 0
-  m_Name: WaitForClick
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &425426509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 425426508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a41e189216e68b4cac1ce815280e3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  testConnection: {fileID: 890302032}
---- !u!4 &425426510
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 425426508}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.3326454, y: .32960996, z: 70.3853073}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
 --- !u!1 &606756523
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,14 +442,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSingleton: 0
-  showOnStart: 0
+  showOnStart: 1
   screenWidth: 480
   screenHeight: 320
   contentGO: {fileID: 209062948}
   contentRenderMessage: rendercontent
-  boxSize: {x: 0, y: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  endPos: {x: 0, y: 0, z: 0}
+  boxSize: {x: 1, y: 1}
+  startPos: {x: .5, y: -.5, z: 0}
+  endPos: {x: .5, y: .5, z: 0}
   slideTime: 3
   disableWhenInStartPos: 1
   fade: 1
@@ -761,6 +769,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_TagString
+      value: MainCharacter
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
   m_RootGameObject: {fileID: 1853824112}
@@ -780,7 +792,7 @@ GameObject:
   - 114: {fileID: 1853824114}
   m_Layer: 0
   m_Name: First Person Controller
-  m_TagString: Untagged
+  m_TagString: MainCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
